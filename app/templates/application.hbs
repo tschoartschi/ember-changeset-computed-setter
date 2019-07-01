@@ -1,0 +1,21 @@
+{{outlet}}
+<h2>Native model</h2>
+
+<div>
+  <div>
+    <label>Base color</label>
+    <input id="native-base-color" value={{this.model.nativeModel.basecolor}} onchange={{action this.changeBasecolorNative value="target.value"}}>
+  </div>
+  <div>Shading</div>
+  <textarea>{{this.model.nativeModel.shading}}</textarea>
+</div>
+<h2>Changeset model</h2>
+<div>
+  <div>
+    <label>Base color</label>
+    {{log this.model.changeset.basecolor}}
+    <input id="changeset-base-color" value={{changeset-get this.model.changeset "basecolor"}} onchange={{action this.changeBasecolorChangset value="target.value"}}>
+  </div>
+  <div>Shading</div>
+  <textarea>{{changeset-get this.model.changeset "shading"}}</textarea>
+</div>
