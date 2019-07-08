@@ -12,6 +12,16 @@ export default Controller.extend({
   changeBasecolorChangset(value) {
     const rgb = stringToRgbArray(value);
     this.set('model.changeset.basecolor', {r: rgb[0], g: rgb[1], b: rgb[2]});
+  },
+
+  changeBasecolorNativeEs6(value) {
+    const rgb = stringToRgbArray(value);
+    this.set('model.nativeModel.basecolorNative', {r: rgb[0], g: rgb[1], b: rgb[2]});
+  },
+
+  changeBasecolorChangsetEs6(value) {
+    const rgb = stringToRgbArray(value);
+    this.set('model.changeset.basecolorNative', {r: rgb[0], g: rgb[1], b: rgb[2]});
   }
 
 });

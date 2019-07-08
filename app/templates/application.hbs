@@ -13,8 +13,27 @@
 <div>
   <div>
     <label>Base color</label>
-    {{log this.model.changeset.basecolor}}
     <input id="changeset-base-color" value={{changeset-get this.model.changeset "basecolor"}} onchange={{action this.changeBasecolorChangset value="target.value"}}>
+  </div>
+  <div>Shading</div>
+  <textarea>{{changeset-get this.model.changeset "shading"}}</textarea>
+</div>
+
+<h2>Native es6 getter/setter</h2>
+<div>
+  <div>
+    <label>Base color</label>
+    <input id="changeset-base-color" value={{this.model.nativeModel.basecolorNative}} onchange={{action this.changeBasecolorNativeEs6 value="target.value"}}>
+  </div>
+  <div>Shading</div>
+  <textarea>{{this.model.nativeModel.shading}}</textarea>
+</div>
+
+<h2>Changeset native es6 getter/setter</h2>
+<div>
+  <div>
+    <label>Base color</label>
+    <input id="changeset-base-color" value={{changeset-get this.model.changeset "basecolorNative"}} onchange={{action this.changeBasecolorChangsetEs6 value="target.value"}}>
   </div>
   <div>Shading</div>
   <textarea>{{changeset-get this.model.changeset "shading"}}</textarea>
